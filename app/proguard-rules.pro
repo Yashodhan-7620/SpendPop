@@ -1,0 +1,2 @@
+-keep class net.zetetic.database.** { *; }
+-keep class com.spendpop.app.TxnEntity { *; }

@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <uses-permission android:name="android.permission.RECEIVE_SMS" />
+  <application>
+    <!-- BROADCAST_SMS => only the Android system can deliver to this receiver (blocks spoofed intents) -->
+    <receiver android:name=".SmsReceiver" android:exported="true" android:permission="android.permission.BROADCAST_SMS">
+      <intent-filter><action android:name="android.provider.Telephony.SMS_RECEIVED" /></intent-filter>
+    </receiver>
+  </application>
+</manifest>
